@@ -5,7 +5,7 @@
 <head>
   
   <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
-  <title>标签：工具配置 - Blog-JuGGnauT</title>
+  <title>分类：git - Blog-JuGGnauT</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -18,7 +18,7 @@
   <link rel="shortcut icon" href="/images/head/head.jpg" type="image/png" />
   <meta property="og:type" content="website">
 <meta property="og:title" content="Blog-JuGGnauT">
-<meta property="og:url" content="http://example.com/tags/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:url" content="http://example.com/categories/%E9%80%9A%E7%94%A8/git/index.html">
 <meta property="og:site_name" content="Blog-JuGGnauT">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="JuGGnauT">
@@ -31,7 +31,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1669167570672">
+  <link rel="stylesheet" href="/css/style.css?v=1669167570679">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -277,47 +277,69 @@
         <section class="nexmoe-posts">
     
     <div class="nexmoe-post">
-        <a href="/2022/11/22/prettier%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/">
+        <a href="/2022/11/23/%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/">
             
                 <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 24.305555555555554%;">
-                    <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="prettier文件配置" class="lazyload">
-                    <h1>prettier文件配置</h1>
+                    <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="代理配置" class="lazyload">
+                    <h1>代理配置</h1>
                 </div>
             
         </a>
         
         <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2022年11月22日</a>
-            <a><i class="nexmoefont icon-areachart"></i>492 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+            <a><i class="nexmoefont icon-calendar-fill"></i>2022年11月23日</a>
+            <a><i class="nexmoefont icon-areachart"></i>273 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
         </div>
         
         <article>
             
-                <h2 id="Prettier"><a href="#Prettier" class="headerlink" title="Prettier"></a>Prettier</h2><p>格式化代码工具</p>
-<p>在项目顶层创建：.prettierrc 文件</p>
-<pre><code class="json">&#123;
-  &quot;printWidth&quot;: 80, //达到该宽度即换行
-  &quot;tabWidth&quot;: 2, //tab缩进字符长度
-  &quot;singleQuote&quot;: false, //是否为但引号
-  &quot;trailingComma&quot;: &quot;es5&quot;, //‘none’/‘es5’/‘all’，在多行逗号分隔的句法结构中尽可能打印尾随逗号
-  &quot;semi&quot;: false, //在语句的末尾打印分号
-  &quot;useTabs&quot;: false, //使用制表符而不是空格缩进行
-  &quot;quoteProps&quot;:&quot;as-needed&quot;, //&lt;as-needed|consistent|preserve&gt;
-  &quot;jsxSingleQuote&quot;: false, //jsx中单引号替代引号
-  &quot;bracketSpacing&quot;: true, // 对象两边的空格 true: &#123; name: &quot;bing&quot; &#125;, false: &#123;name: &quot;bing&quot;&#125;
-  &quot;bracketSameLine&quot;: false, //将&gt;多行 HTML（HTML、JSX、Vue、Angular）元素放在最后一行的末尾，而不是单独放在下一行（不适用于自闭合元素）。
-  &quot;jsxBracketSameLine&quot;: false, //jsx中，和bracketSameLine一个意思
-  // &quot;rangeStart:&quot;: 0, //仅格式化文件的一部分, 开始偏移量 默认0
-  // &quot;rangeEnd&quot;: Infinity, //仅格式化文件的一部分 结束偏移量 默认Infinity
-  // &quot;requirePragma&quot;:false, //开启后，仅对文件头部注释中 带有 @prettier / @format 的文件进行格式化，可以避免将大型库格式化
-  // &quot;insertPragma&quot;: false, //
-  &quot;proseWrap&quot;:&quot;preserve&quot;, //&lt;always|never|preserve&gt; Prettier 将按原样包装 markdown 文本，因为某些服务使用换行敏感的渲染器
-  &quot;htmlWhitespaceSensitivity&quot;: &quot;css&quot;, //&lt;css|strict|ignore&gt;  指定的全局空格敏感性 css 尊重CSSdisplay属性默认值。strict标签周围空格重要，ignore所有标签周围空格不重要
-  &quot;vueIndentScriptAndStyle&quot;: false, //是否缩进 Vue 文件中的代码&lt;script&gt;和&lt;style&gt;标签
-  &quot;endOfLine&quot;:&quot;auto&quot;, //&lt;lf|crlf|cr|auto&gt; git提交后的文件结尾，windows和MacOS表现不同，可以统一避免 git diff
-  &quot;arrowParens&quot;: &quot;always&quot; //(x) =&gt; &#123;&#125; 箭头函数参数只有一个时是否要有小括号。avoid：省略括号 &lt;always|avoid&gt;
-&#125;
+                <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="Git-代理配置"><a href="#Git-代理配置" class="headerlink" title="Git 代理配置"></a>Git 代理配置</h2><p><code>使用命令直接设定socks或者http代理即可。</code></p>
+<p><em>带参数是临时的，修改配置文件是永久变更，修改后最好重启git 设置生效。</em></p>
+<p>socks代理：</p>
+<pre><code class="bash"># socks
+git config --global http.proxy &#39;socks5://127.0.0.1:1080&#39;
+git config --global https.proxy &#39;socks5://127.0.0.1:1080&#39;
+
+# http/https代理
+
+git config --global http.proxy http://127.0.0.1:8080
+git config --global https.proxy https://127.0.0.1:8080
+
+# 取消设置
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+# 查看配置信息：
+git config -l --global
+
+# 执行查看代理
+git config -l
+</code></pre>
+<h1 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h1><h2 id="npm-设置代理"><a href="#npm-设置代理" class="headerlink" title="npm 设置代理"></a>npm 设置代理</h2><pre><code class="bash">
+# 无需账户密码
+npm config set proxy http://127.0.0.1:8080
+npm config set https-proxy http://127.0.0.1:8080
+
+# 需要账户密码
+npm config set proxy http://username:password@server:port
+npm config set https-proxy http://username:pawword@server:port
+
+# 查看config配置
+npm config list
+
+# 清除npm的代理
+npm config delete proxy
+npm config delete https-proxy
+</code></pre>
+<h2 id="npm-设置镜像源"><a href="#npm-设置镜像源" class="headerlink" title="npm 设置镜像源"></a>npm 设置镜像源</h2><pre><code class="bash"># 查看当前的镜像源
+npm config get registry
+
+# 修改当前的镜像源为淘宝镜像源
+npm config set registry https://registry.npm.taobao.org
+
+# 清除npm的镜像源
+npm config delete registry
 </code></pre>
 
             
@@ -1039,7 +1061,7 @@
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1669167570673"></script>
+<script src="/js/app.js?v=1669167570680"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>

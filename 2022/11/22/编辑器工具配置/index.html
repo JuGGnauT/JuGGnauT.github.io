@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+  
+  <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
+  <title>编辑器工具配置 - Blog-JuGGnauT</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  
+  
+
+    <!-- Site Verification -->
+    <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
+
+  <link rel="shortcut icon" href="/images/head/head.jpg" type="image/png" />
+  <meta name="description" content="VScode配置配置Git-bash默认命令行修改settings.json &quot;terminal.integrated.profiles.windows&quot;: &amp;#123;   &quot;JavaScript Debug Terminal&quot;: &amp;#123;     &#x2F;&#x2F; 自己的安装路径, 是bin下的bash.exe,别写错了     &quot;path&quot;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编辑器工具配置">
+<meta property="og:url" content="http://example.com/2022/11/22/%E7%BC%96%E8%BE%91%E5%99%A8%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:site_name" content="Blog-JuGGnauT">
+<meta property="og:description" content="VScode配置配置Git-bash默认命令行修改settings.json &quot;terminal.integrated.profiles.windows&quot;: &amp;#123;   &quot;JavaScript Debug Terminal&quot;: &amp;#123;     &#x2F;&#x2F; 自己的安装路径, 是bin下的bash.exe,别写错了     &quot;path&quot;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2022/11/22/%E7%BC%96%E8%BE%91%E5%99%A8%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/console-1.png">
+<meta property="og:image" content="http://example.com/2022/11/22/%E7%BC%96%E8%BE%91%E5%99%A8%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/console-2.png">
+<meta property="og:image" content="http://example.com/2022/11/22/%E7%BC%96%E8%BE%91%E5%99%A8%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/console-3.png">
+<meta property="og:image" content="http://example.com/2022/11/22/%E7%BC%96%E8%BE%91%E5%99%A8%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/console-4.png">
+<meta property="og:image" content="http://example.com/2022/11/22/%E7%BC%96%E8%BE%91%E5%99%A8%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/console-5.png">
+<meta property="og:image" content="https://github.com/mydesireiscoma/es6-string-html/raw/HEAD/docs/demo.png">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/65f43fdb7ce84675ae7b27456c157d88~tplv-k3u1fbpfcp-watermark.awebp">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fde9052aa5964ce19db4b7b1ec92932a~tplv-k3u1fbpfcp-watermark.awebp">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d2fed306bad24016a9229987a6ff462b~tplv-k3u1fbpfcp-watermark.awebp">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/83f1c06b3fe94e7b9a1b8a1a48ac8649~tplv-k3u1fbpfcp-watermark.awebp">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d5270dc1de5c423287998d85db98e7ec~tplv-k3u1fbpfcp-watermark.awebp">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/538499379fd8431ea772a9425686a0ac~tplv-k3u1fbpfcp-watermark.awebp">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1e1ebd08475c48388b268e1a30eca3c9~tplv-k3u1fbpfcp-watermark.awebp">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ae37ecac6cae4451ac77433ce6562dfa~tplv-k3u1fbpfcp-watermark.awebp">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4c2bbfb723714ed8b753754d0b1e22ca~tplv-k3u1fbpfcp-watermark.awebp">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e16ed817bd0e4c32b92d894f92b6a3b4~tplv-k3u1fbpfcp-watermark.awebp">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/38c693c5d32d45059505bfe5da193844~tplv-k3u1fbpfcp-watermark.awebp">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/998b7b24d1fa474898482861d06e22b9~tplv-k3u1fbpfcp-watermark.awebp">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7414df2047004edf89c48550cd07506f~tplv-k3u1fbpfcp-watermark.awebp">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/716e22049ec74b0084391e95d90986ca~tplv-k3u1fbpfcp-watermark.awebp">
+<meta property="article:published_time" content="2022-11-22T09:26:21.000Z">
+<meta property="article:modified_time" content="2022-11-23T01:20:56.082Z">
+<meta property="article:author" content="JuGGnauT">
+<meta property="article:tag" content="编辑器">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/11/22/%E7%BC%96%E8%BE%91%E5%99%A8%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/console-1.png">
+  <link rel="stylesheet" href="https://lib.baomitu.com/highlight.js/9.15.8/styles/atom-one-dark.min.css" crossorigin>
+  <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css">
+  <link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+  <link rel="stylesheet" href="/lib/fancybox/css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="https://lib.baomitu.com/justifiedGallery/3.8.1/css/justifiedGallery.min.css">
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
+  
+  <link rel="stylesheet" href="/css/style.css?v=1669167570657">
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(/images/background/xiaomai.jpg)"></div>
+    <div class="nexmoe-small" style="background-image: url(/images/background/lihui.png)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="JuGGnauT" class="mdui-btn mdui-btn-icon"><img src="/images/head/head.jpg" alt="JuGGnauT"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="JuGGnauT">
+            <img src="/images/head/head.jpg" alt="JuGGnauT" alt="JuGGnauT">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div class="nexmoe-count-item"><span>文章</span>9 <div class="item-radius"></div><div class="item-radius item-right"></div> </div>
+        <div class="nexmoe-count-item"><span>标签</span>8<div class="item-radius"></div><div class="item-radius item-right"></div></div>
+        <div class="nexmoe-count-item"><span>分类</span>11<div class="item-radius"></div><div class="item-radius item-right"></div></div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-meishi"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-hanbao1"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于糖糖">
+            <i class="mdui-list-item-icon nexmoefont icon-jiubei1"></i>
+            <div class="mdui-list-item-content">
+                关于糖糖
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/friend.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-cola"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/download.html" title="下载中心">
+            <i class="mdui-list-item-icon nexmoefont icon-tangguo"></i>
+            <div class="mdui-list-item-content">
+                下载中心
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  
+<!-- 站内搜索 -->
+
+<div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search" >
+        <form id="search-form">
+            <label><input type="text" id="local-search-input" name="q" results="0" placeholder="站内搜索" class="input form-control" autocomplete="off" autocorrect="off"/></label>
+            <!-- 清空/重置搜索框 -->
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+        </form>
+    </div>
+    <div id="local-search-result"></div> <!-- 搜索结果区 -->
+    <!-- <p class='no-result'></p> 无匹配时显示，注意在 CSS 中设置默认隐藏 -->
+</div>
+
+
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="http://wpa.qq.com/msgrd?v=3&uin=2120252100&site=qq&menu=yes" target="_blank" mdui-tooltip="{content: 'QQ'}" style="color: rgb(64, 196, 255);background-color: rgba(64, 196, 255, .1);">
+            <i class="nexmoefont icon-QQ"></i>
+        </a><a class="mdui-ripple" href="mailto:tangyuxian@vip.qq.com" target="_blank" mdui-tooltip="{content: 'mail'}" style="color: rgb(249,8,8);background-color: rgba(249,8,8,.1);">
+            <i class="nexmoefont icon-mail-fill"></i>
+        </a><a class="mdui-ripple" href="https://blog.csdn.net/qq_40621378?type=blog" target="_blank" mdui-tooltip="{content: 'CSDN'}" style="color: rgb(199,29,35);background-color: rgba(199,29,35,.1);">
+            <i class="nexmoefont icon-csdn"></i>
+        </a><a class="mdui-ripple" href="https://www.cnblogs.com/lovetangyuxian/" target="_blank" mdui-tooltip="{content: '博客园'}" style="color: rgb(66, 214, 29);background-color: rgba(66, 214, 29, .1);">
+            <i class="nexmoefont icon-bokeyuan"></i>
+        </a><a class="mdui-ripple" href="https://github.com/tangyuxian/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a><a class="mdui-ripple" href="https://gitee.com/tangyuxian" target="_blank" mdui-tooltip="{content: 'gitee'}" style="color: rgb(255, 255, 255);background-color: rgb(199,29,35);">
+            <i class="nexmoefont icon-mayun"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/CSS/">CSS</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/HTML/">HTML</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/通用/git/">git</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/javascript/">javascript</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/nodejs/">nodejs</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/nodejs/npm/">npm</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/nodejs/npm/prettier/">prettier</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/javascript/vscode/">vscode</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/网络/">网络</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/通用/">通用</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/CSS%E5%AD%97%E4%BD%93/" style="font-size: 10px;">CSS字体</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 10px;">代理</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">工具配置</a> <a href="/tags/%E7%BC%96%E8%BE%91%E5%99%A8/" style="font-size: 10px;">编辑器</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">网络模型</a> <a href="/tags/%E9%9B%86%E5%90%88/" style="font-size: 10px;">集合</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+
+<style>
+.nexmoe-widget .archive-list-count{
+	position : absolute;
+	right: 15px;
+	top:9px;
+	color: #DDD;
+}
+</style>
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2022 JuGGnauT
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/tangyuxian/hexo-theme-tangyuxian" target="_blank">Tangyuxian</a><br/>
+        <a href="http://beian.miit.gov.cn" target="_blank">辽ICP备2021002341号</a><br/>
+        
+        <div style="font-size: 12px">
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            本站总访问量  <a id="busuanzi_value_site_pv"></a> 次<br />
+            本站访客数<a id="busuanzi_value_site_uv"></a>人次
+        </div>
+        
+        
+    </div>
+
+</div><!-- .nexmoe-drawer -->
+
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    
+        <div class="nexmoe-post-cover"
+             style="padding-bottom: 24.305555555555554%;">
+            <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="编辑器工具配置" class="lazyload">
+            <h1>编辑器工具配置</h1>
+        </div>
+    
+
+        <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2022年11月22日</a>
+    <a><i class="nexmoefont icon-areachart"></i>2.9k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 14 分钟</a>
+</div>
+
+        <div class="nexmoe-post-right">
+            
+        </div>
+
+        <article>
+            <h1 id="VScode配置"><a href="#VScode配置" class="headerlink" title="VScode配置"></a>VScode配置</h1><h2 id="配置Git-bash默认命令行"><a href="#配置Git-bash默认命令行" class="headerlink" title="配置Git-bash默认命令行"></a>配置Git-bash默认命令行</h2><p>修改settings.json</p>
+<pre><code class="json">&quot;terminal.integrated.profiles.windows&quot;: &#123;
+  &quot;JavaScript Debug Terminal&quot;: &#123;
+    // 自己的安装路径, 是bin下的bash.exe,别写错了
+    &quot;path&quot;: &quot;D:\\Software\\Git\\bin\\bash.exe&quot;,
+      // 使自定义命令的别名生效
+      &quot;args&quot;: [
+        &quot;-l&quot;
+      ]
+  &#125;
+&#125;,
+  // 下面这里的这个名称, 换成别的, 会提示有错误, 但是不影响使用
+  // 因为个人有强迫症, 看不得那个圆角提示
+  &quot;terminal.integrated.defaultProfile.windows&quot;: &quot;JavaScript Debug Terminal&quot;,
+</code></pre>
+<h1 id="设置console-log-快捷键方法-其他也一样"><a href="#设置console-log-快捷键方法-其他也一样" class="headerlink" title="设置console.log()快捷键方法,其他也一样"></a>设置console.log()快捷键方法,其他也一样</h1><p>原文档地址：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34412985/article/details/113814580">https://blog.csdn.net/qq_34412985/article/details/113814580</a></p>
+<p>console.log在我们的日常前端开发中是使用频率特别高的一句代码，那我们怎样在vscode编译器中快速的打出来呢。其实很简单只要两步就行:</p>
+<ol>
+<li>在VScode中打开文件 → 首选项 → 用户代码片段 → 在搜索框中搜索 JavaScript 选择 JavaScript.json</li>
+<li>然后我们在其中把关键注释的代码打开就好了</li>
+</ol>
+<p><a href=""><img data-fancybox="gallery" data-sizes="auto" data-src="/2022/11/22/%E7%BC%96%E8%BE%91%E5%99%A8%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/console-1.png" alt="img" class="lazyload"></a></p>
+<p> 打开后，可以将代码适当修改，看个人习惯</p>
+<p><a href=""><img data-fancybox="gallery" data-sizes="auto" data-src="/2022/11/22/%E7%BC%96%E8%BE%91%E5%99%A8%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/console-2.png" alt="img" class="lazyload"></a></p>
+<p>保存后看效果：</p>
+<p><a href=""><img data-fancybox="gallery" data-sizes="auto" data-src="/2022/11/22/%E7%BC%96%E8%BE%91%E5%99%A8%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/console-3.png" alt="img" class="lazyload"></a></p>
+<p> 回车效果如下：</p>
+<p><a href=""><img data-fancybox="gallery" data-sizes="auto" data-src="/2022/11/22/%E7%BC%96%E8%BE%91%E5%99%A8%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/console-4.png" alt="img" class="lazyload"></a></p>
+<p>如果继续使用log为关键字的话要选择下图中的，否则console.log()不显示</p>
+<p><a href=""><img data-fancybox="gallery" data-sizes="auto" data-src="/2022/11/22/%E7%BC%96%E8%BE%91%E5%99%A8%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/console-5.png" alt="img" class="lazyload"></a></p>
+<h1 id="VScode插件"><a href="#VScode插件" class="headerlink" title="VScode插件"></a>VScode插件</h1><h2 id="koroFileHeader"><a href="#koroFileHeader" class="headerlink" title="koroFileHeader"></a>koroFileHeader</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><ol>
+<li>VSCode插件: 用于一键生成文件头部注释并自动更新最后编辑人和编辑时间、函数注释自动生成和参数提取。</li>
+<li>插件可以帮助用户养成良好的编码习惯，规范整个团队风格。</li>
+<li>从2018年5月维护至今, 关闭issue 300+ ，拥有250K+的用户，VSCode图表统计日安装用户100多-400多人，</li>
+<li>经过多版迭代后，插件支持所有主流语言,灵活方便，文档齐全，食用简单！</li>
+<li>觉得插件不错的话，就给个<a target="_blank" rel="noopener" href="https://github.com/OBKoro1/koro1FileHeader">Star</a>⭐️吧~</li>
+</ol>
+<h3 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h3><ol>
+<li>自动生成文件头部注释，自动更新最后编辑人、最后编辑时间等。</li>
+<li>一键生成函数注释，支持函数参数自动提取并列到注释中。</li>
+<li>支持添加佛祖保佑永无bug、神兽护体、甩葱少女等好玩有趣的图像注释</li>
+<li>配置非常灵活方便，各种细节都能配置，可以量身打造适合你的注释。</li>
+<li>支持所有主流语言, 配置文档非常详细，齐全。</li>
+</ol>
+<h2 id="es6-string-html"><a href="#es6-string-html" class="headerlink" title="es6-string-html"></a>es6-string-html</h2><p> <img data-fancybox="gallery" data-sizes="auto" data-src="https://github.com/mydesireiscoma/es6-string-html/raw/HEAD/docs/demo.png" alt="Example" class="lazyload"></p>
+<h2 id="Tabnine-人工智能助手"><a href="#Tabnine-人工智能助手" class="headerlink" title="Tabnine - 人工智能助手"></a>Tabnine - 人工智能助手</h2><p>是一款人工智能代码完成工具，AI 代码片段、代码建议、代码预测、代码提示，<code>PRO</code>每个月12刀，支持洞察与分析、公共代码的高级完成、定制选项等，穷还没体验过。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/65f43fdb7ce84675ae7b27456c157d88~tplv-k3u1fbpfcp-watermark.awebp" alt="img" class="lazyload"></p>
+<p><strong>官方地址：</strong><a href="https://link.juejin.cn/?target=https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode">marketplace.visualstudio.com&#x2F;items?itemN…</a></p>
+<h2 id="Vetur"><a href="#Vetur" class="headerlink" title="Vetur"></a>Vetur</h2><p>这款插件相信不用我多说，想必大家都知道或者用过，它提供了 Vue 特定的语法语义突出显示、代码片段和API语法以错误检查调试等。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fde9052aa5964ce19db4b7b1ec92932a~tplv-k3u1fbpfcp-watermark.awebp" alt="vetur" class="lazyload"></p>
+<p><strong>官方地址：</strong><a href="https://link.juejin.cn/?target=https://marketplace.visualstudio.com/items?itemName=octref.vetur">marketplace.visualstudio.com&#x2F;items?itemN…</a></p>
+<h2 id="Volar"><a href="#Volar" class="headerlink" title="Volar"></a>Volar</h2><p>如果你的项目<code>Vue3.0</code>推荐用这款插件，体验上会更好。 <img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d2fed306bad24016a9229987a6ff462b~tplv-k3u1fbpfcp-watermark.awebp" alt="-w691" class="lazyload"></p>
+<p><code>Volar</code> 是一个专为 Vue 3 构建的语言支持插件，它基于@vue&#x2F;reactivity按需计算 TypeScript 来优化类似于原生 TypeScript 语言服务的性能。</p>
+<p><strong>官方地址：</strong><a href="https://link.juejin.cn/?target=https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar">marketplace.visualstudio.com&#x2F;items?itemN…</a></p>
+<h2 id="翻译-英汉词典-代码翻译"><a href="#翻译-英汉词典-代码翻译" class="headerlink" title="翻译(英汉词典) 代码翻译"></a>翻译(英汉词典) 代码翻译</h2><p>在线翻译，翻译出来的结果真慢，吐槽。这款本地77万词条英汉词典，不依赖任何在线翻译API，无查询次数限制，秒输出结果。</p>
+<p>这款插件支持<code>驼峰、小驼峰、下划线</code>等等写法来写变量名、属性名、类名和方法名的。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/83f1c06b3fe94e7b9a1b8a1a48ac8649~tplv-k3u1fbpfcp-watermark.awebp" alt="-w1205" class="lazyload"></p>
+<p><strong>官方地址：</strong><a href="https://link.juejin.cn/?target=https://marketplace.visualstudio.com/items?itemName=CodeInChinese.EnglishChineseDictionary">marketplace.visualstudio.com&#x2F;items?itemN…</a></p>
+<h2 id="Material-Icon-Theme"><a href="#Material-Icon-Theme" class="headerlink" title="Material Icon Theme"></a>Material Icon Theme</h2><p>非常齐全的图标，可以说你想要包含在这里面，只截了其中一小部分图。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d5270dc1de5c423287998d85db98e7ec~tplv-k3u1fbpfcp-watermark.awebp" alt="-w895" class="lazyload"></p>
+<p><strong>官方地址：</strong><a href="https://link.juejin.cn/?target=https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme">marketplace.visualstudio.com&#x2F;items?itemN…</a></p>
+<h2 id="vscode-icons"><a href="#vscode-icons" class="headerlink" title="vscode-icons"></a>vscode-icons</h2><p>这一款是VSCode官方的图标主题包，看个人喜好选择图标库。效果如下</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/538499379fd8431ea772a9425686a0ac~tplv-k3u1fbpfcp-watermark.awebp" alt="-w330" class="lazyload"></p>
+<p><strong>官方地址：</strong><a href="https://link.juejin.cn/?target=https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons">marketplace.visualstudio.com&#x2F;items?itemN…</a></p>
+<h2 id="Bracket-Pair-Colorizer-v1-60内置"><a href="#Bracket-Pair-Colorizer-v1-60内置" class="headerlink" title="Bracket Pair Colorizer(v1.60内置)"></a>Bracket Pair Colorizer(v1.60内置)</h2><p>这个插件使用颜色来标识匹配的括号。代码非常多的情况，括号也就变的非常多，如果删除某个属性名对象，没有颜色区分可以就会误删。 <img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1e1ebd08475c48388b268e1a30eca3c9~tplv-k3u1fbpfcp-watermark.awebp" alt="-w1021" class="lazyload"></p>
+<p><strong>官方地址：</strong><a href="https://link.juejin.cn/?target=https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer">marketplace.visualstudio.com&#x2F;items?itemN…</a></p>
+<pre><code class="js">// settings.json
+  &quot;editor.bracketPairColorization.enabled&quot;: true,
+
+// 个性化
+  &quot;workbench.colorCustomizations&quot;: &#123;
+    &quot;editorBracketHighlight.foreground1&quot;: &quot;#ffd700&quot;,
+    &quot;editorBracketHighlight.foreground2&quot;: &quot;#da70d6&quot;,
+    &quot;editorBracketHighlight.foreground3&quot;: &quot;#87cefa&quot;,
+    &quot;editorBracketHighlight.foreground4&quot;: &quot;#ffd700&quot;,
+    &quot;editorBracketHighlight.foreground5&quot;: &quot;#da70d6&quot;,
+    &quot;editorBracketHighlight.foreground6&quot;: &quot;#87cefa&quot;,
+    &quot;editorBracketHighlight.unexpectedBracket.foreground&quot;: &quot;#ff0000&quot;
+  &#125;
+</code></pre>
+<blockquote>
+<p>更多配置可以参考这篇文章 <a href="https://link.juejin.cn/?target=https://blog.csdn.net/qq_21567385/article/details/120387446">blog.csdn.net&#x2F;qq_21567385…</a></p>
+</blockquote>
+<h2 id="GitLens"><a href="#GitLens" class="headerlink" title="GitLens"></a>GitLens</h2><p>增强Git功能构建到Visual Studio代码可视化代码作者一眼就通过Git指责注释和代码镜头,无缝导航和探索Git存储库。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ae37ecac6cae4451ac77433ce6562dfa~tplv-k3u1fbpfcp-watermark.awebp" alt="-w1078" class="lazyload"> <strong>官方地址：</strong><a href="https://link.juejin.cn/?target=https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens">marketplace.visualstudio.com&#x2F;items?itemN…</a></p>
+<h2 id="Git-History"><a href="#Git-History" class="headerlink" title="Git History"></a>Git History</h2><p>查看git日志、文件历史、比较分支或提交。</p>
+<p>当我们需要查看文件的历史，可能会借助另外一个Git UI工具查看，耶，只要点击文件的右上角图标就能看到历史代码还有代码差异性。 <img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4c2bbfb723714ed8b753754d0b1e22ca~tplv-k3u1fbpfcp-watermark.awebp" alt="-w1285" class="lazyload"></p>
+<p><strong>官方地址：</strong><a href="https://link.juejin.cn/?target=https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory">marketplace.visualstudio.com&#x2F;items?itemN…</a></p>
+<h2 id="Path-Intellisense-路径智能提示"><a href="#Path-Intellisense-路径智能提示" class="headerlink" title="Path Intellisense 路径智能提示"></a>Path Intellisense 路径智能提示</h2><p>当我们需要引入某个文件或者图片，文件夹层级可能很多，我们可以通过这款插件来提示我们当前下的文件有哪些。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e16ed817bd0e4c32b92d894f92b6a3b4~tplv-k3u1fbpfcp-watermark.awebp" alt="img" class="lazyload"></p>
+<p><strong>官方地址：</strong><a href="https://link.juejin.cn/?target=https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense">marketplace.visualstudio.com&#x2F;items?itemN…</a></p>
+<h2 id="Auto-Rename-Tag"><a href="#Auto-Rename-Tag" class="headerlink" title="Auto Rename Tag"></a>Auto Rename Tag</h2><p>自动重命名成对的<code>HTML/XML</code>标签。</p>
+<p>当我们修改<code>&lt;a-button&gt;&lt;/c-button&gt;</code>的标签时就会生成<code>&lt;a-button&gt;&lt;/a-button&gt;</code>。</p>
+<p><strong>官方地址：</strong><a href="https://link.juejin.cn/?target=https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">marketplace.visualstudio.com&#x2F;items?itemN…</a></p>
+<h2 id="Auto-Close-Tag"><a href="#Auto-Close-Tag" class="headerlink" title="Auto Close Tag"></a>Auto Close Tag</h2><p>自动添加<code>HTML/XML</code>关闭标签。</p>
+<p>当我们写下<code>&lt;c-button&gt;</code>时就会生成<code>&lt;c-button&gt;&lt;/c-button&gt;</code>。</p>
+<p><strong>官方地址：</strong><a href="https://link.juejin.cn/?target=https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag">marketplace.visualstudio.com&#x2F;items?itemN…</a></p>
+<h2 id="Live-Server"><a href="#Live-Server" class="headerlink" title="Live Server"></a>Live Server</h2><p>在本地服务器搭建自动重新加载静态特性HTML页面。</p>
+<p>html页面中鼠标右键选择 <code>open with Live Server</code></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/38c693c5d32d45059505bfe5da193844~tplv-k3u1fbpfcp-watermark.awebp" alt="img" class="lazyload"></p>
+<p><strong>官方地址：</strong><a href="https://link.juejin.cn/?target=https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">marketplace.visualstudio.com&#x2F;items?itemN…</a></p>
+<h2 id="Prettier-Code-formatter"><a href="#Prettier-Code-formatter" class="headerlink" title="Prettier - Code formatter"></a>Prettier - Code formatter</h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/998b7b24d1fa474898482861d06e22b9~tplv-k3u1fbpfcp-watermark.awebp" alt="-w714" class="lazyload"> Prettier是一个代码格式化程序。它通过解析代码并使用它自己的规则重新打印代码来强制实现一致的样式，这些规则考虑到最大行长度，在必要时格式化代码。</p>
+<pre><code class="json">// vscode setting.json
+&#123;
+  &quot;editor.formatOnSave&quot;: false, // 在保存时格式化文件
+  &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;,
+  &quot;[javascript]&quot;: &#123;
+    &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;
+  &#125;,
+  &quot;[vue]&quot;: &#123;
+    &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;
+  &#125;
+&#125;
+</code></pre>
+<p><strong>官方地址：</strong><a href="https://link.juejin.cn/?target=https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">marketplace.visualstudio.com&#x2F;items?itemN…</a></p>
+<h2 id="ESlint"><a href="#ESlint" class="headerlink" title="ESlint"></a>ESlint</h2><p>在一个多人协同开发的团队中，统一的代码编写规范非常重要。一套规范可以让我们编写的代码达到一致的风格，提高代码的可读性和统一性。自然维护性也会有所提高。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7414df2047004edf89c48550cd07506f~tplv-k3u1fbpfcp-watermark.awebp" alt="-w735" class="lazyload"> 以下eslint规范代码依托于 vue 官方的 <code>eslint</code> 规则 <code>eslint-config-vue</code> 做了少许的修改。大家可以按照自己的需求进行定制化配置。</p>
+<pre><code class="json">// .eslintrc.js
+module.exports = &#123;
+  root: true,
+  parserOptions: &#123;
+    parser: &#39;babel-eslint&#39;,
+    sourceType: &#39;module&#39;
+  &#125;,
+  env: &#123;
+    browser: true,
+    node: true,
+    es6: true,
+  &#125;,
+  extends: [&#39;plugin:vue/recommended&#39;, &#39;eslint:recommended&#39;],
+
+  // add your custom rules here
+  //it is base on https://github.com/vuejs/eslint-config-vue
+  rules: &#123;
+    &quot;vue/max-attributes-per-line&quot;: [2, &#123;
+      &quot;singleline&quot;: 10,
+      &quot;multiline&quot;: &#123;
+        &quot;max&quot;: 1,
+        &quot;allowFirstLine&quot;: false
+      &#125;
+    &#125;],
+    &quot;vue/singleline-html-element-content-newline&quot;: &quot;off&quot;,
+    &quot;vue/multiline-html-element-content-newline&quot;:&quot;off&quot;,
+    &quot;vue/name-property-casing&quot;: [&quot;error&quot;, &quot;PascalCase&quot;],
+    &quot;vue/no-v-html&quot;: &quot;off&quot;,
+    &#39;accessor-pairs&#39;: 2,
+    &#39;arrow-spacing&#39;: [2, &#123;
+      &#39;before&#39;: true,
+      &#39;after&#39;: true
+    &#125;],
+    &#39;block-spacing&#39;: [2, &#39;always&#39;],
+    &#39;brace-style&#39;: [2, &#39;1tbs&#39;, &#123;
+      &#39;allowSingleLine&#39;: true
+    &#125;],
+    &#39;camelcase&#39;: [0, &#123;
+      &#39;properties&#39;: &#39;always&#39;
+    &#125;],
+    &#39;comma-dangle&#39;: [2, &#39;never&#39;],
+    &#39;comma-spacing&#39;: [2, &#123;
+      &#39;before&#39;: false,
+      &#39;after&#39;: true
+    &#125;],
+    &#39;comma-style&#39;: [2, &#39;last&#39;],
+    &#39;constructor-super&#39;: 2,
+    &#39;curly&#39;: [2, &#39;multi-line&#39;],
+    &#39;dot-location&#39;: [2, &#39;property&#39;],
+    &#39;eol-last&#39;: 2,
+    &#39;eqeqeq&#39;: [&quot;error&quot;, &quot;always&quot;, &#123;&quot;null&quot;: &quot;ignore&quot;&#125;],
+    &#39;generator-star-spacing&#39;: [2, &#123;
+      &#39;before&#39;: true,
+      &#39;after&#39;: true
+    &#125;],
+    &#39;handle-callback-err&#39;: [2, &#39;^(err|error)$&#39;],
+    &#39;indent&#39;: [2, 2, &#123;
+      &#39;SwitchCase&#39;: 1
+    &#125;],
+    &#39;jsx-quotes&#39;: [2, &#39;prefer-single&#39;],
+    &#39;key-spacing&#39;: [2, &#123;
+      &#39;beforeColon&#39;: false,
+      &#39;afterColon&#39;: true
+    &#125;],
+    &#39;keyword-spacing&#39;: [2, &#123;
+      &#39;before&#39;: true,
+      &#39;after&#39;: true
+    &#125;],
+    &#39;new-cap&#39;: [2, &#123;
+      &#39;newIsCap&#39;: true,
+      &#39;capIsNew&#39;: false
+    &#125;],
+    &#39;new-parens&#39;: 2,
+    &#39;no-array-constructor&#39;: 2,
+    &#39;no-caller&#39;: 2,
+    &#39;no-console&#39;: &#39;off&#39;,
+    &#39;no-class-assign&#39;: 2,
+    &#39;no-cond-assign&#39;: 2,
+    &#39;no-const-assign&#39;: 2,
+    &#39;no-control-regex&#39;: 0,
+    &#39;no-delete-var&#39;: 2,
+    &#39;no-dupe-args&#39;: 2,
+    &#39;no-dupe-class-members&#39;: 2,
+    &#39;no-dupe-keys&#39;: 2,
+    &#39;no-duplicate-case&#39;: 2,
+    &#39;no-empty-character-class&#39;: 2,
+    &#39;no-empty-pattern&#39;: 2,
+    &#39;no-eval&#39;: 2,
+    &#39;no-ex-assign&#39;: 2,
+    &#39;no-extend-native&#39;: 2,
+    &#39;no-extra-bind&#39;: 2,
+    &#39;no-extra-boolean-cast&#39;: 2,
+    &#39;no-extra-parens&#39;: [2, &#39;functions&#39;],
+    &#39;no-fallthrough&#39;: 2,
+    &#39;no-floating-decimal&#39;: 2,
+    &#39;no-func-assign&#39;: 2,
+    &#39;no-implied-eval&#39;: 2,
+    &#39;no-inner-declarations&#39;: [2, &#39;functions&#39;],
+    &#39;no-invalid-regexp&#39;: 2,
+    &#39;no-irregular-whitespace&#39;: 2,
+    &#39;no-iterator&#39;: 2,
+    &#39;no-label-var&#39;: 2,
+    &#39;no-labels&#39;: [2, &#123;
+      &#39;allowLoop&#39;: false,
+      &#39;allowSwitch&#39;: false
+    &#125;],
+    &#39;no-lone-blocks&#39;: 2,
+    &#39;no-mixed-spaces-and-tabs&#39;: 2,
+    &#39;no-multi-spaces&#39;: 2,
+    &#39;no-multi-str&#39;: 2,
+    &#39;no-multiple-empty-lines&#39;: [2, &#123;
+      &#39;max&#39;: 1
+    &#125;],
+    &#39;no-native-reassign&#39;: 2,
+    &#39;no-negated-in-lhs&#39;: 2,
+    &#39;no-new-object&#39;: 2,
+    &#39;no-new-require&#39;: 2,
+    &#39;no-new-symbol&#39;: 2,
+    &#39;no-new-wrappers&#39;: 2,
+    &#39;no-obj-calls&#39;: 2,
+    &#39;no-octal&#39;: 2,
+    &#39;no-octal-escape&#39;: 2,
+    &#39;no-path-concat&#39;: 2,
+    &#39;no-proto&#39;: 2,
+    &#39;no-redeclare&#39;: 2,
+    &#39;no-regex-spaces&#39;: 2,
+    &#39;no-return-assign&#39;: [2, &#39;except-parens&#39;],
+    &#39;no-self-assign&#39;: 2,
+    &#39;no-self-compare&#39;: 2,
+    &#39;no-sequences&#39;: 2,
+    &#39;no-shadow-restricted-names&#39;: 2,
+    &#39;no-spaced-func&#39;: 2,
+    &#39;no-sparse-arrays&#39;: 2,
+    &#39;no-this-before-super&#39;: 2,
+    &#39;no-throw-literal&#39;: 2,
+    &#39;no-trailing-spaces&#39;: 2,
+    &#39;no-undef&#39;: 2,
+    &#39;no-undef-init&#39;: 2,
+    &#39;no-unexpected-multiline&#39;: 2,
+    &#39;no-unmodified-loop-condition&#39;: 2,
+    &#39;no-unneeded-ternary&#39;: [2, &#123;
+      &#39;defaultAssignment&#39;: false
+    &#125;],
+    &#39;no-unreachable&#39;: 2,
+    &#39;no-unsafe-finally&#39;: 2,
+    &#39;no-unused-vars&#39;: [2, &#123;
+      &#39;vars&#39;: &#39;all&#39;,
+      &#39;args&#39;: &#39;none&#39;
+    &#125;],
+    &#39;no-useless-call&#39;: 2,
+    &#39;no-useless-computed-key&#39;: 2,
+    &#39;no-useless-constructor&#39;: 2,
+    &#39;no-useless-escape&#39;: 0,
+    &#39;no-whitespace-before-property&#39;: 2,
+    &#39;no-with&#39;: 2,
+    &#39;one-var&#39;: [2, &#123;
+      &#39;initialized&#39;: &#39;never&#39;
+    &#125;],
+    &#39;operator-linebreak&#39;: [2, &#39;after&#39;, &#123;
+      &#39;overrides&#39;: &#123;
+        &#39;?&#39;: &#39;before&#39;,
+        &#39;:&#39;: &#39;before&#39;
+      &#125;
+    &#125;],
+    &#39;padded-blocks&#39;: [2, &#39;never&#39;],
+    &#39;quotes&#39;: [2, &#39;single&#39;, &#123;
+      &#39;avoidEscape&#39;: true,
+      &#39;allowTemplateLiterals&#39;: true
+    &#125;],
+    &#39;semi&#39;: [2, &#39;never&#39;],
+    &#39;semi-spacing&#39;: [2, &#123;
+      &#39;before&#39;: false,
+      &#39;after&#39;: true
+    &#125;],
+    &#39;space-before-blocks&#39;: [2, &#39;always&#39;],
+    &#39;space-before-function-paren&#39;: [2, &#39;never&#39;],
+    &#39;space-in-parens&#39;: [2, &#39;never&#39;],
+    &#39;space-infix-ops&#39;: 2,
+    &#39;space-unary-ops&#39;: [2, &#123;
+      &#39;words&#39;: true,
+      &#39;nonwords&#39;: false
+    &#125;],
+    &#39;spaced-comment&#39;: [2, &#39;always&#39;, &#123;
+      &#39;markers&#39;: [&#39;global&#39;, &#39;globals&#39;, &#39;eslint&#39;, &#39;eslint-disable&#39;, &#39;*package&#39;, &#39;!&#39;, &#39;,&#39;]
+    &#125;],
+    &#39;template-curly-spacing&#39;: [2, &#39;never&#39;],
+    &#39;use-isnan&#39;: 2,
+    &#39;valid-typeof&#39;: 2,
+    &#39;wrap-iife&#39;: [2, &#39;any&#39;],
+    &#39;yield-star-spacing&#39;: [2, &#39;both&#39;],
+    &#39;yoda&#39;: [2, &#39;never&#39;],
+    &#39;prefer-const&#39;: 2,
+    &#39;no-debugger&#39;: process.env.NODE_ENV === &#39;production&#39; ? 2 : 0,
+    &#39;object-curly-spacing&#39;: [2, &#39;always&#39;, &#123;
+      objectsInObjects: false
+    &#125;],
+    &#39;array-bracket-spacing&#39;: [2, &#39;never&#39;]
+  &#125;
+&#125;
+</code></pre>
+<p><strong>官方地址：</strong><a href="https://link.juejin.cn/?target=https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">marketplace.visualstudio.com&#x2F;items?itemN…</a></p>
+<h2 id="ClassTree"><a href="#ClassTree" class="headerlink" title="ClassTree"></a>ClassTree</h2><p>比较新兴的插件，根据AST 分析文件编码的提供快速生成 jsx&#x2F;vue class结构。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/716e22049ec74b0084391e95d90986ca~tplv-k3u1fbpfcp-watermark.awebp" alt="img" class="lazyload"></p>
+
+        </article>
+
+        
+            
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>JuGGnauT<br>
+    
+    <strong>本文链接：</strong><a href="http://example.com/2022/11/22/%E7%BC%96%E8%BE%91%E5%99%A8%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/" title="http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;11&#x2F;22&#x2F;%E7%BC%96%E8%BE%91%E5%99%A8%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;11&#x2F;22&#x2F;%E7%BC%96%E8%BE%91%E5%99%A8%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE&#x2F;</a><br>
+
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+        
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/javascript/">javascript</a><a class="nexmoefont icon-appstore-fill -link" href="/categories/javascript/vscode/">vscode</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E7%BC%96%E8%BE%91%E5%99%A8/" rel="tag">编辑器</a>
+    
+</div>
+
+    <div class="nexmoe-post-footer">
+        <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src='https://lib.baomitu.com/valine/1.3.9/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: 'r5zxC0st0DDjPA9auXzMV7HY-gzGzoHsz',
+        appKey: '3bqCsovpyfTPHUzTHovd3V3V'
+    })
+</script>
+</section>
+    </div>
+</div>
+
+
+        <div class="nexmoe-post-right">
+          
+            <div class="nexmoe-fixed">
+              <div class="nexmoe-tool">
+                <a href="#" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+              </div>
+            </div>
+          
+        </div>
+    </div>
+  </div>
+  <div id="nexmoe-pendant">
+    <div class="nexmoe-drawer mdui-drawer nexmoe-pd" id="drawer">
+        
+            <div class="nexmoe-pd-item">
+                <div class="clock">
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="needle" id="hours"></div>
+        <div class="needle" id="minutes"></div>
+        <div class="needle" id="seconds"></div>
+        <div class="clock_logo">
+
+        </div>
+
+    </div>
+<style>
+    .clock {
+        background-color: #ffffff;
+        width: 70vw;
+        height: 70vw;
+        max-width: 70vh;
+        max-height: 70vh;
+        border: solid 2.8vw #242424;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        box-sizing: border-box;
+        box-shadow: 0 1.4vw 2.8vw rgba(0, 0, 0, 0.8);
+        zoom:0.2
+    }
+
+    .memory {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
+    }
+
+    .memory:nth-child(1) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(0deg) translateY(-520%);
+    }
+
+    .memory:nth-child(2) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(6deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(3) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(12deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(4) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(18deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(5) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(24deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(6) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(30deg) translateY(-520%);
+    }
+
+    .memory:nth-child(7) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(36deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(8) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(42deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(9) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(48deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(10) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(54deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(11) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(60deg) translateY(-520%);
+    }
+
+    .memory:nth-child(12) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(66deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(13) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(72deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(14) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(78deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(15) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(84deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(16) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(90deg) translateY(-520%);
+    }
+
+    .memory:nth-child(17) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(96deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(18) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(102deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(19) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(108deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(20) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(114deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(21) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(120deg) translateY(-520%);
+    }
+
+    .memory:nth-child(22) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(126deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(23) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(132deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(24) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(138deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(25) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(144deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(26) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(150deg) translateY(-520%);
+    }
+
+    .memory:nth-child(27) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(156deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(28) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(162deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(29) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(168deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(30) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(174deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(31) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(180deg) translateY(-520%);
+    }
+
+    .memory:nth-child(32) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(186deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(33) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(192deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(34) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(198deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(35) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(204deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(36) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(210deg) translateY(-520%);
+    }
+
+    .memory:nth-child(37) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(216deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(38) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(222deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(39) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(228deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(40) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(234deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(41) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(240deg) translateY(-520%);
+    }
+
+    .memory:nth-child(42) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(246deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(43) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(252deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(44) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(258deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(45) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(264deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(46) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(270deg) translateY(-520%);
+    }
+
+    .memory:nth-child(47) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(276deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(48) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(282deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(49) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(288deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(50) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(294deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(51) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(300deg) translateY(-520%);
+    }
+
+    .memory:nth-child(52) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(306deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(53) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(312deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(54) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(318deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(55) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(324deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(56) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(330deg) translateY(-520%);
+    }
+
+    .memory:nth-child(57) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(336deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(58) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(342deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(59) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(348deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(60) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(354deg) translateY(-1461%);
+    }
+
+    .needle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
+    }
+
+    .needle#hours {
+        background-color: #1f1f1f;
+        width: 4%;
+        height: 30%;
+        transform-origin: center 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    .needle#hours.moving {
+        transition: transform 150ms ease-out;
+    }
+
+    .needle#hours:after {
+        content: '';
+        background-color: #1f1f1f;
+        width: 4vw;
+        height: 4vw;
+        max-width: 4vh;
+        max-height: 4vh;
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .needle#minutes {
+        background-color: #1f1f1f;
+        width: 2%;
+        height: 45%;
+        transform-origin: center 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    .needle#minutes.moving {
+        transition: transform 150ms ease-out;
+    }
+
+    .needle#minutes:after {
+        content: '';
+        background-color: #1f1f1f;
+        width: 4vw;
+        height: 4vw;
+        max-width: 4vh;
+        max-height: 4vh;
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .needle#seconds {
+        background-color: #cb2f2f;
+        width: 1%;
+        height: 50%;
+        transform-origin: center 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    .needle#seconds.moving {
+        transition: transform 150ms ease-out;
+    }
+
+    .needle#seconds:after {
+        content: '';
+        background-color: #cb2f2f;
+        width: 2.5vw;
+        height: 2.5vw;
+        max-width: 2.5vh;
+        max-height: 2.5vh;
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .clock_logo{
+        width: 10vw;
+        height: 10vw;
+        max-width: 10vh;
+        max-height: 10vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    @media (min-width: 100vh) {
+        .clock {
+            border: solid 2.8vh #242424;
+            box-shadow: 0 1.4vh 2.8vh rgba(0, 0, 0, 0.8);
+        }
+    }
+
+</style>
+
+
+
+
+
+            </div>
+        
+            <div class="nexmoe-pd-item">
+                <div class="qweather" >
+    <div id="he-plugin-standard"></div>
+    <div class="qweather-logo">
+
+    </div>
+
+</div>
+<style>
+    .qweather{
+        position: relative;
+    }
+    .qweather-logo{
+        position: absolute;
+        right: 0;
+        top: -15px;
+        width: 40px;
+        height: 40px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+</style>
+<script>
+  WIDGET = {
+    "CONFIG": {
+      "layout": "2",
+      "width": "260",
+      "height": "220",
+      "background": "5",
+      "dataColor": "e67249",
+      "borderRadius": "15",
+      "key": "f74d1e1690e6432d801e97fa2f05a162"
+    }
+  }
+</script>
+<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
+
+            </div>
+        
+</div>
+<style>
+    .nexmoe-pd {
+        left: auto;
+        top: 40px;
+        right: 0;
+    }
+    .nexmoe-pd-item{
+       display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+</style>
+
+  </div>
+  <script src="https://lib.baomitu.com/lazysizes/5.1.0/lazysizes.min.js"></script>
+<script src="https://lib.baomitu.com/highlight.js/10.0.0/highlight.min.js"></script>
+<script src="https://lib.baomitu.com/mdui/0.4.3/js/mdui.min.js"></script>
+
+<script>
+	hljs.initHighlightingOnLoad();
+</script>
+
+<script src="https://lib.baomitu.com/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/app.js?v=1669167570658"></script>
+
+<script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+  
+
+
+
+
+
+<!-- hexo injector body_end start -->
+<script src="https://lib.baomitu.com/clipboard.js/2.0.8/clipboard.min.js"></script>
+
+<script src="/lib/codeBlock/codeBlockFuction.js"></script>
+
+<script src="/lib/codeBlock/codeLang.js"></script>
+
+<script src="/lib/codeBlock/codeCopy.js"></script>
+
+<script src="/lib/codeBlock/codeShrink.js"></script>
+
+<link rel="stylesheet" href="/lib/codeBlock/matery.css">
+
+<script src="/js/clock.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script src="/js/search.js"></script>
+
+<script src="/js/webapp.js"></script>
+<!-- hexo injector body_end end --></body>
+</html>
+
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/250cb4aa.js","daovoice")</script>
+<script>
+  daovoice('init', {
+    app_id: "250cb4aa"
+  });
+  daovoice('update');
+</script>
+
