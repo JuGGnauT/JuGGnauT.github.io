@@ -31,7 +31,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1669168090578">
+  <link rel="stylesheet" href="/css/style.css?v=1670232416446">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -56,8 +56,8 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div class="nexmoe-count-item"><span>文章</span>9 <div class="item-radius"></div><div class="item-radius item-right"></div> </div>
-        <div class="nexmoe-count-item"><span>标签</span>8<div class="item-radius"></div><div class="item-radius item-right"></div></div>
+        <div class="nexmoe-count-item"><span>文章</span>10 <div class="item-radius"></div><div class="item-radius item-right"></div> </div>
+        <div class="nexmoe-count-item"><span>标签</span>9<div class="item-radius"></div><div class="item-radius item-right"></div></div>
         <div class="nexmoe-count-item"><span>分类</span>11<div class="item-radius"></div><div class="item-radius item-right"></div></div>
     </div>
     <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
@@ -133,7 +133,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/javascript/">javascript</a>
-          <span class="category-list-count">3</span>
+          <span class="category-list-count">4</span>
         </li>
 
         
@@ -146,7 +146,7 @@
         
 
         <li class="category-list-item">
-          <a class="category-list-link" href="/categories/通用/git/npm/">npm</a>
+          <a class="category-list-link" href="/categories/nodejs/npm/">npm</a>
           <span class="category-list-count">2</span>
         </li>
 
@@ -189,7 +189,7 @@
   
   <div class="nexmoe-widget-wrap">
     <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
-      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/CSS%E5%AD%97%E4%BD%93/" style="font-size: 10px;">CSS字体</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 10px;">代理</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">工具配置</a> <a href="/tags/%E7%BC%96%E8%BE%91%E5%99%A8/" style="font-size: 10px;">编辑器</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">网络模型</a> <a href="/tags/%E9%9B%86%E5%90%88/" style="font-size: 10px;">集合</a>
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/CSS%E5%AD%97%E4%BD%93/" style="font-size: 10px;">CSS字体</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 10px;">代理</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">工具配置</a> <a href="/tags/%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/" style="font-size: 10px;">常用代码</a> <a href="/tags/%E7%BC%96%E8%BE%91%E5%99%A8/" style="font-size: 10px;">编辑器</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">网络模型</a> <a href="/tags/%E9%9B%86%E5%90%88/" style="font-size: 10px;">集合</a>
     </div>
     
   </div>
@@ -199,7 +199,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">文章归档</h3>
     <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">10</span></li></ul>
     </div>
   </div>
 
@@ -236,6 +236,132 @@
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
         <section class="nexmoe-posts">
+    
+    <div class="nexmoe-post">
+        <a href="/2022/12/05/%E6%8E%A5%E5%8F%A3%E9%87%8D%E8%AF%95%E5%87%BD%E6%95%B0/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 24.305555555555554%;">
+                    <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="接口重试函数" class="lazyload">
+                    <h1>接口重试函数</h1>
+                </div>
+            
+        </a>
+        
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2022年12月05日</a>
+            <a><i class="nexmoefont icon-areachart"></i>353 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+        </div>
+        
+        <article>
+            
+                <pre><code class="js">//TODO: 1. 实现一个，有错误机制，重试机制，加载机制的请求函数
+//      2. 先做一个，仅跟接口请求有关的
+
+defineAsyncRequest(&#123;
+    // 加载Promise
+    loader: () =&gt; new Promise((resolve, reject) =&gt; &#123;
+        setTimeout(() =&gt; &#123;
+            Math.random() &gt; .9 ? resolve(&quot;请求成功！&quot;) : reject(&quot;请求失败！&quot;)
+        &#125;, 3000)
+    &#125;),
+    // 加载延时
+    delay: 1000,
+    // 加载中状态变更回调
+    onLoading: (state) =&gt; &#123;
+        console.log(state ? &#39;加载中。。&#39; : &#39;加载完毕&#39;)
+    &#125;,
+    // 出错回调，可以重试
+    onError: (retry, fail, retries) =&gt; &#123;
+        console.log(retries)
+        if (retries &gt; 3) &#123;
+            console.log(&#39;失败超过三次，直接当作失败&#39;)
+            fail()
+        &#125; else &#123;
+            retry()
+        &#125;
+    &#125;
+&#125;)
+    .then(res =&gt; &#123;
+        console.log(`成功 res:$&#123;res&#125;`)
+    &#125;)
+    .catch((err) =&gt; &#123;
+        console.log(&#39;err=&gt;&#39;, err)
+    &#125;)
+
+
+function defineAsyncRequest(options) &#123;
+    console.time(&quot;开始执行 defineAsyncRequest&quot;)
+    if (typeof options === &#39;function&#39;) &#123;
+        options = &#123;
+            loader: options
+        &#125;
+    &#125;
+    const &#123; loader &#125; = options
+
+    // 记录重试次数
+    let retries = 0
+    let loading = false
+    let loaded = false
+
+    function loadingCb(loading) &#123;
+        options.onLoading &amp;&amp; options.onLoading(loading)
+    &#125;
+
+    if (!options.onLoading) &#123;
+        options.onLoading = () =&gt; &#123; &#125;
+    &#125;
+
+    let loadingTimer = null
+    if (options.delay) &#123;
+        loadingTimer = setTimeout(() =&gt; &#123;
+            loading = true
+            loadingCb(loading)
+        &#125;, options.delay);
+    &#125; else &#123;
+        loading = true
+        loadingCb(loading)
+    &#125;
+
+    function load() &#123;
+        return loader()
+            .catch((err) =&gt; &#123;
+                if (options.onError) &#123;
+                    return new Promise((resolve, reject) =&gt; &#123;
+                        // 重试
+                        const retry = () =&gt; &#123;
+                            console.log(&quot;请求重试----&quot;)
+                            resolve(load())
+                            retries++
+                        &#125;
+                        const fail = () =&gt; reject(err)
+
+                        options.onError(retry, fail, retries)
+                    &#125;)
+                &#125; else &#123;
+                    throw err;
+                &#125;
+            &#125;)
+    &#125;
+
+
+    return load()
+        .then(c =&gt; &#123;
+            loaded = true
+            return c
+        &#125;)
+        .finally(() =&gt; &#123;
+            loading = false
+            loadingCb(loading)
+            clearTimeout(loadingTimer)
+        &#125;)
+
+&#125;
+</code></pre>
+
+            
+        </article>
+    </div>
     
     <div class="nexmoe-post">
         <a href="/2022/11/22/prettier%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/">
@@ -1622,7 +1748,7 @@ module.exports = &#123;
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1669168090578"></script>
+<script src="/js/app.js?v=1670232416446"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
@@ -1639,9 +1765,7 @@ module.exports = &#123;
 
 
 <!-- hexo injector body_end start -->
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
-<script src="/js/search.js"></script>
+<script src="/js/clock.js"></script>
 
 <script src="https://lib.baomitu.com/clipboard.js/2.0.8/clipboard.min.js"></script>
 
@@ -1655,9 +1779,11 @@ module.exports = &#123;
 
 <link rel="stylesheet" href="/lib/codeBlock/matery.css">
 
-<script src="/js/clock.js"></script>
-
 <script src="/js/webapp.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script src="/js/search.js"></script>
 <!-- hexo injector body_end end --></body>
 </html>
 
