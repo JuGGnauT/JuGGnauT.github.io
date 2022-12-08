@@ -5,7 +5,7 @@
 <head>
   
   <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
-  <title>分类：通用 - Blog-JuGGnauT</title>
+  <title>CSS选择器优先级 - Blog-JuGGnauT</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -16,13 +16,20 @@
     <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
 
   <link rel="shortcut icon" href="/images/head/head.jpg" type="image/png" />
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Blog-JuGGnauT">
-<meta property="og:url" content="http://example.com/categories/%E9%80%9A%E7%94%A8/index.html">
+  <meta name="description" content="分类 口诀：0符 1标 2类 3ID 4内联 5important  （1）0级：通配选择器、选择符和逻辑组合伪类。其中，通配选择器写作星号（*）。示例如下： * &amp;#123; color: #000; &amp;#125;  选择符指+、&gt;、~、空格和||。 逻辑组合伪类有:not()、:is()和:where等，这些伪类本身并不影响CSS优先级，影响优先级的是括号里面的选择器。 :not() &amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS选择器优先级">
+<meta property="og:url" content="http://example.com/2022/12/02/CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7/index.html">
 <meta property="og:site_name" content="Blog-JuGGnauT">
+<meta property="og:description" content="分类 口诀：0符 1标 2类 3ID 4内联 5important  （1）0级：通配选择器、选择符和逻辑组合伪类。其中，通配选择器写作星号（*）。示例如下： * &amp;#123; color: #000; &amp;#125;  选择符指+、&gt;、~、空格和||。 逻辑组合伪类有:not()、:is()和:where等，这些伪类本身并不影响CSS优先级，影响优先级的是括号里面的选择器。 :not() &amp;">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2022/12/02/CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7/youxianji.png">
+<meta property="article:published_time" content="2022-12-02T01:56:23.000Z">
+<meta property="article:modified_time" content="2022-12-05T09:34:27.902Z">
 <meta property="article:author" content="JuGGnauT">
+<meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/12/02/CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7/youxianji.png">
   <link rel="stylesheet" href="https://lib.baomitu.com/highlight.js/9.15.8/styles/atom-one-dark.min.css" crossorigin>
   <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css">
   <link rel="stylesheet" href="/lib/iconfont/iconfont.css">
@@ -31,7 +38,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1670466176793">
+  <link rel="stylesheet" href="/css/style.css?v=1670466176763">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -235,79 +242,99 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        <section class="nexmoe-posts">
+        <div class="nexmoe-post">
     
-    <div class="nexmoe-post">
-        <a href="/2022/11/23/%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/">
-            
-                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 24.305555555555554%;">
-                    <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="代理配置" class="lazyload">
-                    <h1>代理配置</h1>
-                </div>
-            
-        </a>
-        
-        <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2022年11月23日</a>
-            <a><i class="nexmoefont icon-areachart"></i>273 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+        <div class="nexmoe-post-cover"
+             style="padding-bottom: 24.305555555555554%;">
+            <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="CSS选择器优先级" class="lazyload">
+            <h1>CSS选择器优先级</h1>
         </div>
-        
-        <article>
-            
-                <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="Git-代理配置"><a href="#Git-代理配置" class="headerlink" title="Git 代理配置"></a>Git 代理配置</h2><p><code>使用命令直接设定socks或者http代理即可。</code></p>
-<p><em>带参数是临时的，修改配置文件是永久变更，修改后最好重启git 设置生效。</em></p>
-<p>socks代理：</p>
-<pre><code class="bash"># socks
-git config --global http.proxy &#39;socks5://127.0.0.1:10809&#39;
-git config --global https.proxy &#39;socks5://127.0.0.1:10809&#39;
-
-# http/https代理
-
-git config --global http.proxy http://127.0.0.1:10809
-git config --global https.proxy https://127.0.0.1:10809
-
-# 取消设置
-git config --global --unset http.proxy
-git config --global --unset https.proxy
-
-# 查看配置信息：
-git config -l --global
-
-# 执行查看代理
-git config -l
-</code></pre>
-<h1 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h1><h2 id="npm-设置代理"><a href="#npm-设置代理" class="headerlink" title="npm 设置代理"></a>npm 设置代理</h2><pre><code class="bash">
-# 无需账户密码
-npm config set proxy http://127.0.0.1:10809
-npm config set https-proxy http://127.0.0.1:10809
-
-# 需要账户密码
-npm config set proxy http://username:password@server:port
-npm config set https-proxy http://username:pawword@server:port
-
-# 查看config配置
-npm config list
-
-# 清除npm的代理
-npm config delete proxy
-npm config delete https-proxy
-</code></pre>
-<h2 id="npm-设置镜像源"><a href="#npm-设置镜像源" class="headerlink" title="npm 设置镜像源"></a>npm 设置镜像源</h2><pre><code class="bash"># 查看当前的镜像源
-npm config get registry
-
-# 修改当前的镜像源为淘宝镜像源
-npm config set registry https://registry.npm.taobao.org
-
-# 清除npm的镜像源
-npm config delete registry
-</code></pre>
-
-            
-        </article>
-    </div>
     
+
+        <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2022年12月02日</a>
+    <a><i class="nexmoefont icon-areachart"></i>275 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+</div>
+
+        <div class="nexmoe-post-right">
+            
+        </div>
+
+        <article>
+            <h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><blockquote>
+<p>口诀：0符 1标 2类 3ID 4内联 5important</p>
+</blockquote>
+<p>（1）0级：<code>通配选择器、选择符和逻辑组合伪类</code>。其中，通配选择器写作星号（*）。示例如下：</p>
+<pre><code class="css">* &#123; color: #000; &#125;
+</code></pre>
+<p>选择符指+、&gt;、~、空格和||。</p>
+<p>逻辑组合伪类有:not()、:is()和:where等，这些伪类本身并不影响CSS优先级，影响优先级的是括号里面的选择器。</p>
+<pre><code class="css">:not() &#123;&#125;
+</code></pre>
+<p>（2）1级：标签选择器。示例如下：</p>
+<pre><code class="css">body &#123; color: #333; &#125;
+</code></pre>
+<p>（3）2级：类选择器、属性选择器和伪类。示例如下：</p>
+<pre><code class="css">.foo &#123; color: #666; &#125;
+[foo] &#123; color: #666; &#125;
+:hover &#123; color: #333; &#125;
+</code></pre>
+<p>（4）3级：ID选择器。示例如下：</p>
+<pre><code class="css">#foo &#123; color: #999; &#125;
+</code></pre>
+<p>（5）4级：style属性内联。示例如下：</p>
+<pre><code class="css">&lt;span style=&quot;color: #ccc;&quot;&gt;优先级&lt;/span&gt;
+</code></pre>
+<p>（6）5级：!important。示例如下：</p>
+<pre><code class="css">.foo &#123; color: #fff !important; &#125;
+</code></pre>
+<h2 id="计算规则"><a href="#计算规则" class="headerlink" title="计算规则"></a>计算规则</h2><blockquote>
+<p>出现一个0级选择器，优先级数值+0；出现一个1级选择器，优先级数值+1；出现一个2级选择器，优先级数值+10；出现一个3级选择器，优先级数值+100。</p>
+</blockquote>
+<p><a href=""><img data-fancybox="gallery" data-sizes="auto" data-src="/2022/12/02/CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7/youxianji.png" alt="img" class="lazyload"></a></p>
+
+        </article>
+
+        
+            
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>JuGGnauT<br>
+    
+    <strong>本文链接：</strong><a href="http://example.com/2022/12/02/CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7/" title="http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;12&#x2F;02&#x2F;CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;12&#x2F;02&#x2F;CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7&#x2F;</a><br>
+
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+        
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/CSS/">CSS</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/CSS/" rel="tag">CSS</a>
+    
+</div>
+
+    <div class="nexmoe-post-footer">
+        <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src='https://lib.baomitu.com/valine/1.3.9/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: 'r5zxC0st0DDjPA9auXzMV7HY-gzGzoHsz',
+        appKey: '3bqCsovpyfTPHUzTHovd3V3V'
+    })
+</script>
 </section>
+    </div>
+</div>
 
 
         <div class="nexmoe-post-right">
@@ -1022,7 +1049,7 @@ npm config delete registry
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1670466176794"></script>
+<script src="/js/app.js?v=1670466176764"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>

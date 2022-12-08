@@ -5,7 +5,7 @@
 <head>
   
   <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
-  <title>分类：通用 - Blog-JuGGnauT</title>
+  <title>文章归档：2022/11 - Blog-JuGGnauT</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -18,7 +18,7 @@
   <link rel="shortcut icon" href="/images/head/head.jpg" type="image/png" />
   <meta property="og:type" content="website">
 <meta property="og:title" content="Blog-JuGGnauT">
-<meta property="og:url" content="http://example.com/categories/%E9%80%9A%E7%94%A8/index.html">
+<meta property="og:url" content="http://example.com/archives/2022/11/page/2/index.html">
 <meta property="og:site_name" content="Blog-JuGGnauT">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="JuGGnauT">
@@ -31,7 +31,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1670466176793">
+  <link rel="stylesheet" href="/css/style.css?v=1670466176782">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -238,70 +238,36 @@
         <section class="nexmoe-posts">
     
     <div class="nexmoe-post">
-        <a href="/2022/11/23/%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/">
+        <a href="/2022/11/22/hello-world/">
             
                 <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 24.305555555555554%;">
-                    <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="代理配置" class="lazyload">
-                    <h1>代理配置</h1>
+                    <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="Hello World" class="lazyload">
+                    <h1>Hello World</h1>
                 </div>
             
         </a>
         
         <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2022年11月23日</a>
-            <a><i class="nexmoefont icon-areachart"></i>273 字</a>
+            <a><i class="nexmoefont icon-calendar-fill"></i>2022年11月22日</a>
+            <a><i class="nexmoefont icon-areachart"></i>75 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
         </div>
         
         <article>
             
-                <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="Git-代理配置"><a href="#Git-代理配置" class="headerlink" title="Git 代理配置"></a>Git 代理配置</h2><p><code>使用命令直接设定socks或者http代理即可。</code></p>
-<p><em>带参数是临时的，修改配置文件是永久变更，修改后最好重启git 设置生效。</em></p>
-<p>socks代理：</p>
-<pre><code class="bash"># socks
-git config --global http.proxy &#39;socks5://127.0.0.1:10809&#39;
-git config --global https.proxy &#39;socks5://127.0.0.1:10809&#39;
-
-# http/https代理
-
-git config --global http.proxy http://127.0.0.1:10809
-git config --global https.proxy https://127.0.0.1:10809
-
-# 取消设置
-git config --global --unset http.proxy
-git config --global --unset https.proxy
-
-# 查看配置信息：
-git config -l --global
-
-# 执行查看代理
-git config -l
+                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
 </code></pre>
-<h1 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h1><h2 id="npm-设置代理"><a href="#npm-设置代理" class="headerlink" title="npm 设置代理"></a>npm 设置代理</h2><pre><code class="bash">
-# 无需账户密码
-npm config set proxy http://127.0.0.1:10809
-npm config set https-proxy http://127.0.0.1:10809
-
-# 需要账户密码
-npm config set proxy http://username:password@server:port
-npm config set https-proxy http://username:pawword@server:port
-
-# 查看config配置
-npm config list
-
-# 清除npm的代理
-npm config delete proxy
-npm config delete https-proxy
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
 </code></pre>
-<h2 id="npm-设置镜像源"><a href="#npm-设置镜像源" class="headerlink" title="npm 设置镜像源"></a>npm 设置镜像源</h2><pre><code class="bash"># 查看当前的镜像源
-npm config get registry
-
-# 修改当前的镜像源为淘宝镜像源
-npm config set registry https://registry.npm.taobao.org
-
-# 清除npm的镜像源
-npm config delete registry
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
 </code></pre>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
+</code></pre>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
             
         </article>
@@ -309,6 +275,10 @@ npm config delete registry
     
 </section>
 
+    <nav class="nexmoe-page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2022/11/"><i class="nexmoefont icon-left"></i></a><a class="page-number" href="/archives/2022/11/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 
         <div class="nexmoe-post-right">
           
@@ -1022,7 +992,7 @@ npm config delete registry
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1670466176794"></script>
+<script src="/js/app.js?v=1670466176782"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
